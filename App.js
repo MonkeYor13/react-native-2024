@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View, Button, Modal } from "react-native";
 import { useState } from "react";
-import Imagenes from "./components/imagenes";
+
 
 
 export default function App() {
@@ -10,7 +10,7 @@ export default function App() {
     <View style={styles.container}>
 
     
-      
+     
     </View>
   );
 }
