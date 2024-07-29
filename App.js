@@ -1,11 +1,16 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Button, Modal } from "react-native";
+import { useState } from "react";
+import Imagenes from "./components/imagenes";
+
 
 export default function App() {
+  const [isModalVisible, setIsModalVisible] = useState(false);
+
   return (
     <View style={styles.container}>
-      <Text>Open up hola como estas</Text>
-      <StatusBar style="auto" />
+
+    
+      
     </View>
   );
 }
@@ -13,8 +18,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#ffff",
+    padding: 60,
   },
 });
