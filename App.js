@@ -1,16 +1,23 @@
-import { StyleSheet, Text, View, Button, Modal } from "react-native";
-import { useState } from "react";
-
-
+import { StyleSheet, Text, View, ScrollView } from "react-native";
+import Imagenes from "./components/Imagenes";
+import Modales from "./components/Modales";
+import Loading from "./components/Loading";
+import Alerta from "./components/Alerta";
+import PasarPrompt from "./components/PasarPrompt";
+import Estilos from "./components/Estilos";
 
 export default function App() {
-  const [isModalVisible, setIsModalVisible] = useState(false);
-
   return (
     <View style={styles.container}>
-
-    
-     
+      <Text style={styles.titleText}>React Native Course</Text>
+      <ScrollView style={styles.scroll}>
+        <Imagenes />
+        <Modales />
+        <Loading />
+        <Alerta />
+        <PasarPrompt name="Yorvis" />
+        <Estilos />
+      </ScrollView>
     </View>
   );
 }
@@ -19,6 +26,13 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#ffff",
-    padding: 60,
+    paddingHorizontal: 10,
+    paddingVertical: 30,
   },
+  titleText: {
+    fontSize: 32,
+    fontWeight: "bold",
+  },
+  scroll:{
+  }
 });
