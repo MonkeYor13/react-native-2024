@@ -5,6 +5,8 @@ import Loading from "./components/Loading";
 import Alerta from "./components/Alerta";
 import PasarPrompt from "./components/PasarPrompt";
 import Estilos from "./components/Estilos";
+import AbsolutoYRelavito from "./components/AbsolutoYRelavito";
+import DimensionesUI from "./components/DimensionesUI";
 
 export default function App() {
   return (
@@ -17,6 +19,8 @@ export default function App() {
         <Alerta />
         <PasarPrompt name="Yorvis" />
         <Estilos />
+        <AbsolutoYRelavito />
+        <DimensionesUI />
       </ScrollView>
     </View>
   );
@@ -33,6 +37,5 @@ const styles = StyleSheet.create({
     fontSize: 32,
     fontWeight: "bold",
   },
-  scroll:{
-  }
+  scroll: {},
 });
