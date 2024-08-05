@@ -2,9 +2,10 @@ import { View, Text, StyleSheet, Dimensions } from 'react-native'
 import React from 'react'
 
 export default function DimensionesUI() {
+
   return (
     <View style={styles.container}>
-      
+
       <View style={styles.box}>
         <Text style={styles.text}>Dimensiones con %</Text>
       </View>
@@ -16,9 +17,9 @@ export default function DimensionesUI() {
   )
 }
 
-
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
+
 
 const styles = StyleSheet.create({
   container: {
@@ -26,23 +27,24 @@ const styles = StyleSheet.create({
     backgroundColor: 'yellow',
     alignItems: 'center',
     height: 300,
-    justifyContent:'center'
+    justifyContent: 'center'
   },
   box: {
     backgroundColor: 'blue',
     width: '70%',
     height: '40%',
-    justifyContent:'center'
+    justifyContent: 'center'
   },
   text: {
     fontSize: windowWidth > 500 ? 48 : 24,
     color: 'white',
     textAlign: 'center',
-  }, 
-  dimensiones:{
+  },
+  dimensiones: {
     backgroundColor: 'red',
     width: windowWidth > 500 ? '40%' : '90%',
     height: windowHeight > 600 ? '40%' : '90%',
-    justifyContent:'center'
-  }
+    justifyContent: 'center'
+  },
+
 })
