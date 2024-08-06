@@ -24,7 +24,7 @@ export default function App() {
     image: require("./assets/charmander.png"),
     type: "Fire",
     hp: 39,
-    moves: ["Scratch", "Ember", "Growl", "Leer"],
+    moves: ["Scratch", "Ember", "Growl"],
     weaknesses: ["Water", "Rock"],
   };
 
@@ -58,7 +58,7 @@ export default function App() {
   return (
     <SafeAreaView style={styles.container}>
       <Text style={styles.titleText}>React Native Course</Text>
-      <ScrollView style={styles.scroll}>
+      {/* <ScrollView style={styles.scroll}>
         <CustomButton title={"Press me"} onPress={() => alert("Pressed")} />
         <Imagenes />
         <Modales />
@@ -69,9 +69,14 @@ export default function App() {
         <AbsolutoYRelavito />
         <DimensionesUI />
         <MyuseWindowDimensiones />
-      </ScrollView>
+      </ScrollView> */}
 
-      {/* <PokemonCard {...charmanderData}/> */}
+      <ScrollView>
+        <PokemonCard {...charmanderData} />
+        <PokemonCard {...squirtleData} />
+        <PokemonCard {...bulbasaurData} />
+        <PokemonCard {...pikachuData} />
+      </ScrollView>
     </SafeAreaView>
   );
 }
