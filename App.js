@@ -33,23 +33,22 @@ export default function App() {
   return (
     <SafeAreaView style={styles.container}>
       <Text style={styles.titleText}>React Native Course</Text>
-      <ScrollView style={styles.scroll}>
-        {/* <CustomButton title={"Press me"} onPress={() => alert("Pressed")} /> */}
-        {/* <Imagenes /> */}
-        {/* <Modales /> */}
-        {/* <Loading /> */}
-        {/* <Alerta /> */}
-        {/* <PasarPrompt name="Yorvis" /> */}
-        {/* <Estilos /> */}
-        {/* <AbsolutoYRelavito /> */}
-        {/* <DimensionesUI /> */}
-        {/* <MyuseWindowDimensiones /> */}
-        {/* <PokemonPadre /> */}
-        {/* <MiFlatList /> */}
-        {/* <MiLista/> */}
-        <MiFormulario />
-        
-      </ScrollView>
+      {/* <ScrollView style={styles.scroll}> */}
+      {/* <CustomButton title={"Press me"} onPress={() => alert("Pressed")} /> */}
+      {/* <Imagenes /> */}
+      {/* <Modales /> */}
+      {/* <Loading /> */}
+      {/* <Alerta /> */}
+      {/* <PasarPrompt name="Yorvis" /> */}
+      {/* <Estilos /> */}
+      {/* <AbsolutoYRelavito /> */}
+      {/* <DimensionesUI /> */}
+      {/* <MyuseWindowDimensiones /> */}
+      {/* <PokemonPadre /> */}
+      {/* <MiFlatList /> */}
+      {/* <MiLista/> */}
+      {/* <MiFormulario /> */}
+      {/* </ScrollView> */}
     </SafeAreaView>
   );
 }
