@@ -6,6 +6,27 @@ export default function MyLogin() {
 
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
+  const [errors, setErrors] = useState({})
+
+  const validateForm = () => {
+    let errors = {};
+
+    if (!username) errors.username = 'Username is required'
+    if (!password) errors.password = 'Password is required'
+
+    setErrors(errors);
+
+    return Object.keys(errors).length === 0;
+  }
+
+  const handleSubmit = () => {
+    if (validateForm()) {
+      console.log('Submited', username, password);
+      setUsername('');
+      setPassword('');
+      setErrors({})
+    }
+  }
 
   return (
     <KeyboardAvoidingView
@@ -17,9 +38,13 @@ export default function MyLogin() {
         <Image source={imagen} style={styles.imagen} />
         <Text style={styles.label}>Username</Text>
         <TextInput style={styles.input} placeholder='Enter your Username' value={username} onChangeText={setUsername} />
+        {errors.username ? <Text style={styles.errorText} >{errors.username}</Text> : null}
+
         <Text style={styles.label}>Password</Text>
         <TextInput style={styles.input} placeholder='Enter your Password' value={password} onChangeText={setPassword} secureTextEntry />
-        <Button title='Login' />
+        {errors.password ? <Text style={styles.errorText} >{errors.password}</Text> : null}
+
+        <Button title='Login' onPress={handleSubmit} />
       </View>
     </KeyboardAvoidingView>
   )
@@ -29,6 +54,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
+    margin: 16
   },
   form: {
     backgroundColor: 'white',
@@ -52,13 +78,17 @@ const styles = StyleSheet.create({
     height: 40,
     borderColor: '#9a9a9a',
     borderWidth: 1,
-    marginBottom: 20,
+    marginBottom: 5,
     paddingHorizontal: 10,
   },
   imagen: {
     width: 200,
-    height: 400,
+    height: 200,
     alignSelf: 'center',
     marginBottom: 50,
+  },
+  errorText: {
+    color: 'red',
+    marginBottom: 10
   }
 })
