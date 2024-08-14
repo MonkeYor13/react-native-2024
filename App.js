@@ -25,13 +25,13 @@ import MiFlatList from "./components/RNList/MiFlatList";
 import PokemonPadre from "./components/ExcercisePokemonCards/PokemonPadre";
 import MiFormulario from "./components/RNForms/MiFormulario";
 import MyLogin from "./components/RNForms/MyLogin";
+import ApiRest from "./components/RNNetworking/ApiRest";
 
 //
-import { useState } from "react";
-
+//import { useState } from "react";
 
 export default function App() {
-  const [name, setName] = useState("");
+  //const [name, setName] = useState("");
   return (
     <SafeAreaView style={styles.container}>
       <Text style={styles.titleText}>React Native Course</Text>
@@ -51,7 +51,8 @@ export default function App() {
       {/* <MiLista/> */}
       {/* <MiFormulario /> */}
       {/* </ScrollView> */}
-      <MyLogin/>
+      {/* <MyLogin/> */}
+      <ApiRest />
     </SafeAreaView>
   );
 }

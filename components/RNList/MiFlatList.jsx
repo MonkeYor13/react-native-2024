@@ -20,7 +20,7 @@ export default function MiFlatList() {
       //horizontal
       //keyExtractor={(item, index) => item.id.toString()}
 
-      //  PARA SEPAR LAS CARD SI NO SE QUIERE UNAR EN LOS ESTILOS EL MARGINBOTTON
+      //  PARA SEPAR LAS CARD SI NO SE QUIERE USAR EN LOS ESTILOS EL MARGINBOTTON
       ItemSeparatorComponent={<View style={{ height: 16 }} />}
 
       //  AVISO CUANDO LA LISTA NO REGRESA NADA O FALLA, para ver si funciona debemos uetar la lista de data y agregar a dentro []

@@ -8,6 +8,7 @@ export default function MyLogin() {
   const [password, setPassword] = useState('')
   const [errors, setErrors] = useState({})
 
+  //creamos para que detecte si esta vacio algun input indique una aviso de requerido
   const validateForm = () => {
     let errors = {};
 
@@ -19,6 +20,7 @@ export default function MyLogin() {
     return Object.keys(errors).length === 0;
   }
 
+  //aqui creamos nuestra funcion para el boton
   const handleSubmit = () => {
     if (validateForm()) {
       console.log('Submited', username, password);
