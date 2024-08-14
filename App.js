@@ -24,9 +24,11 @@ import MiLista from "./components/RNList/MiLista";
 import MiFlatList from "./components/RNList/MiFlatList";
 import PokemonPadre from "./components/ExcercisePokemonCards/PokemonPadre";
 import MiFormulario from "./components/RNForms/MiFormulario";
+import MyLogin from "./components/RNForms/MyLogin";
 
 //
 import { useState } from "react";
+
 
 export default function App() {
   const [name, setName] = useState("");
@@ -49,6 +51,7 @@ export default function App() {
       {/* <MiLista/> */}
       {/* <MiFormulario /> */}
       {/* </ScrollView> */}
+      <MyLogin/>
     </SafeAreaView>
   );
 }
