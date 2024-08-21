@@ -13,6 +13,7 @@ export default function HomeScreen({ navigation, route }) {
         onPress={() =>
           navigation.navigate("About", {
             name: " Yorvis",
+            name2: 'Pepito'
           })
         }
       />

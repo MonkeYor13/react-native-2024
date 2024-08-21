@@ -1,7 +1,17 @@
 import { View, Text, StyleSheet, Button } from "react-native";
+import { useLayoutEffect } from "react";
 
 export default function AboutScreen({ route, navigation }) {
-  const { name, lastname } = route.params;
+  
+  useLayoutEffect(() => {
+    navigation.setOptions({
+      title: name2,
+    });
+  }, [navigation, name2]);
+
+  const { name, lastname, name2 } = route.params;
+  
+  //
   return (
     <View style={styles.container}>
       <Text style={styles.text}>
@@ -19,7 +29,9 @@ export default function AboutScreen({ route, navigation }) {
       />
       <Button
         title="Go back with data"
-        onPress={() => navigation.navigate("Home",{resultado: 'Regresamos a la data'})}
+        onPress={() =>
+          navigation.navigate("Home", { resultado: "Regresamos a la data" })
+        }
       />
     </View>
   );
