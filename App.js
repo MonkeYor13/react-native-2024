@@ -38,35 +38,37 @@ import SettingScreen from "./components/RNNavegation/screens/SettingScreen";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import CourseList from "./components/RNNavegation/screens/CourseList";
 import Profile from "./components/RNNavegation/screens/Profile";
+import Reanimated from "./components/RNReanimated/Reanimated";
 
 //AQUI ESTA LA FUNCION DE TODAS LA APP
 
-// export default function App() {
-//   //const [name, setName] = useState("");
-//   return (
-//     <SafeAreaView style={styles.container}>
-//       <Text style={styles.titleText}>React Native Course</Text>
-//       {/* <ScrollView style={styles.scroll}> */}
-//       {/* <CustomButton title={"Press me"} onPress={() => alert("Pressed")} /> */}
-//       {/* <Imagenes /> */}
-//       {/* <Modales /> */}
-//       {/* <Loading /> */}
-//       {/* <Alerta /> */}
-//       {/* <PasarPrompt name="Yorvis" /> */}
-//       {/* <Estilos /> */}
-//       {/* <AbsolutoYRelavito /> */}
-//       {/* <DimensionesUI /> */}
-//       {/* <MyuseWindowDimensiones /> */}
-//       {/* <PokemonPadre /> */}
-//       {/* <MiFlatList /> */}
-//       {/* <MiLista/> */}
-//       {/* <MiFormulario /> */}
-//       {/* </ScrollView> */}
-//       {/* <MyLogin/> */}
-//       <ApiRest />
-//     </SafeAreaView>
-//   );
-// }
+export default function App() {
+  //const [name, setName] = useState("");
+  return (
+    <SafeAreaView style={styles.container}>
+      <Text style={styles.titleText}>React Native Course</Text>
+      {/* <ScrollView style={styles.scroll}> */}
+      {/* <CustomButton title={"Press me"} onPress={() => alert("Pressed")} />; */}
+      {/* <Imagenes /> */}
+      {/* <Modales /> */}
+      {/* <Loading /> */}
+      {/* <Alerta /> */}
+      {/* <PasarPrompt name="Yorvis" /> */}
+      {/* <Estilos /> */}
+      {/* <AbsolutoYRelavito /> */}
+      {/* <DimensionesUI /> */}
+      {/* <MyuseWindowDimensiones /> */}
+      {/* <PokemonPadre /> */}
+      {/* <MiFlatList /> */}
+      {/* <MiLista/> */}
+      {/* <MiFormulario /> */}
+      {/* </ScrollView> */}
+      {/* <MyLogin/> */}
+      {/* <ApiRest /> */}
+      <Reanimated/>
+    </SafeAreaView>
+  );
+}
 
 // const styles = StyleSheet.create({
 //   container: {
@@ -218,28 +220,32 @@ import Profile from "./components/RNNavegation/screens/Profile";
 // }
 
 //AQUI APDRENDEMOS A COMBINAR TAB DENTRO DEL STACK
-function Home() {
-  const Tab = createBottomTabNavigator();
-  return (
-    <Tab.Navigator>
-      {/* RECUERDA QUE NO PUEDE LLAVAR EL MISMO NAME QUE EL STACK POR ESO COLOCAMOS (MYHOME) */}
-      <Tab.Screen name="MyHome" component={HomeScreen} />
-      <Tab.Screen name="Setting" component={SettingScreen} />
-    </Tab.Navigator>
-  );
-}
-const Stack = createNativeStackNavigator();
-export default function App() {
-  return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen
-          name="Home"
-          component={Home}
-          options={{ headerShown: false }}
-        />
-        <Stack.Screen name="About" component={AboutScreen} />
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
-}
+// function Home() {
+//   const Tab = createBottomTabNavigator();
+//   return (
+//     <Tab.Navigator>
+//       {/* RECUERDA QUE NO PUEDE LLAVAR EL MISMO NAME QUE EL STACK POR ESO COLOCAMOS (MYHOME) */}
+//       <Tab.Screen name="MyHome" component={HomeScreen} />
+//       <Tab.Screen name="Setting" component={SettingScreen} />
+//     </Tab.Navigator>
+//   );
+// }
+// const Stack = createNativeStackNavigator();
+// export default function App() {
+//   return (
+//     <NavigationContainer>
+//       <Stack.Navigator>
+//         <Stack.Screen
+//           name="Home"
+//           component={Home}
+//           options={{ headerShown: false }}
+//         />
+//         <Stack.Screen name="About" component={AboutScreen} />
+//       </Stack.Navigator>
+//     </NavigationContainer>
+//   );
+// }
+
+
+
+

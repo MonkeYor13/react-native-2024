@@ -6,7 +6,7 @@ import { View, Text, StyleSheet, FlatList, SafeAreaView, ActivityIndicator, Stat
 export default function ApiRest() {
   const [postList, setPostList] = useState([])  // useState de la lista
   const [isLoading, setIsLoading] = useState(true)  // useState del loding
-  const [refreshing, setRefreshing] = useState(false)  // useState de el refresco de la pagina para cqrgar mas informacion
+  const [refreshing, setRefreshing] = useState(false)  // useState de el refresco de la pagina para cargar mas informacion
 
   //crear post 
   const [postTitle, setPostTitle] = useState('')
