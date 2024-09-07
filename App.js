@@ -70,32 +70,32 @@ export default function App() {
   );
 }
 
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     backgroundColor: "#f5f5f5",
-//     //paddingTop: Platform.OS === "android" ? 25 : 0,
-//     paddingTop: StatusBar.currentHeight,
-//   },
-//   titleText: {
-//     ...Platform.select({
-//       ios: {
-//         color: "yelow",
-//         fontSize: 24,
-//       },
-//       android: {
-//         color: "red",
-//         fontSize: 32,
-//         fontStyle: "italic",
-//       },
-//     }),
-//     fontWeight: "bold",
-//     textAlign: "center",
-//   },
-//   scroll: {
-//     paddingHorizontal: 16,
-//   },
-// });
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#f5f5f5",
+    //paddingTop: Platform.OS === "android" ? 25 : 0,
+    paddingTop: StatusBar.currentHeight,
+  },
+  titleText: {
+    ...Platform.select({
+      ios: {
+        color: "yelow",
+        fontSize: 24,
+      },
+      android: {
+        color: "red",
+        fontSize: 32,
+        fontStyle: "italic",
+      },
+    }),
+    fontWeight: "bold",
+    textAlign: "center",
+  },
+  scroll: {
+    paddingHorizontal: 16,
+  },
+});
 
 //AQUI INICIAMOS APRENDER LA NAVEGACION ENTRE PANTALLAS
 // const Stack = createNativeStackNavigator();
