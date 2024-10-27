@@ -39,11 +39,17 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import CourseList from "./components/RNNavegation/screens/CourseList";
 import Profile from "./components/RNNavegation/screens/Profile";
 import Reanimated from "./components/RNReanimated/Reanimated";
+import Fuentes from "./components/Fonst/Fuentes";
+import { useFonts } from "expo-font";
 
 //AQUI ESTA LA FUNCION DE TODAS LA APP
 
 export default function App() {
   //const [name, setName] = useState("");
+  const [fontsLoaded] = useFonts({
+    Other: require("./assets/fonts/PlaywriteGBS-Italic-VariableFont_wght.ttf"),
+  });
+  if(!fontsLoaded) return null;
   return (
     <SafeAreaView style={styles.container}>
       <Text style={styles.titleText}>React Native Course</Text>
@@ -65,7 +71,8 @@ export default function App() {
       {/* </ScrollView> */}
       {/* <MyLogin/> */}
       {/* <ApiRest /> */}
-      <Reanimated/>
+      {/* <Reanimated/> */}
+      <Fuentes />
     </SafeAreaView>
   );
 }
@@ -245,7 +252,3 @@ const styles = StyleSheet.create({
 //     </NavigationContainer>
 //   );
 // }
-
-
-
-
